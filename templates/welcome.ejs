@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to CampusConnect!!</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap"
+    />
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #f8f6f4;
+        position: relative;
+        font-family: "Work Sans", sans-serif;
+      }
+
+      .bg_color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fafafa;
+        z-index: -10;
+      }
+
+      .container {
+        border-radius: 12px;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 1rem 0.5rem;
+        background-color: #0a0a0a;
+      }
+
+      .container .logo_image {
+        width: 80%;
+        height: 100%;
+        margin: 1rem auto;
+        padding: 5px;
+      }
+      .logo_image > img {
+        width: 100%;
+        height: 100%;
+      }
+      .main_container {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+        width: 100%;
+      }
+
+      /* css for the content */
+      .team {
+        padding: 0 2rem 2rem;
+      }
+
+      .team > P {
+        font-weight: 600;
+        margin: 0.3rem 0;
+        color: #333;
+      }
+      footer {
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+        padding: 3rem 1rem;
+        background-color: #0a0a0a;
+        width: 100%;
+        text-align: center;
+      }
+
+      footer > h2 {
+        margin: 1rem auto;
+        font-size: 2rem;
+        color: white;
+        text-align: center;
+      }
+
+      .line {
+        width: 90%;
+        height: 1px;
+        background-color: #f8f6f4;
+        margin: 1.2rem auto;
+      }
+
+      .privacy_policy {
+        text-align: center;
+        width: 80%;
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+        color: #f8f6f4;
+        margin: 1rem auto;
+      }
+      .support_email {
+        text-align: center;
+        font-size: 0.9rem;
+        /* word-wrap: break-word; */
+        width: 80%;
+        color: #f8f6f4;
+        line-height: 1.3rem;
+        margin: 1rem auto;
+        font-size: 0.8rem;
+      }
+
+      .unsubscribe {
+        text-align: center;
+        color: #f8f6f4;
+        margin: 1rem auto;
+        font-size: 0.7rem;
+      }
+
+      .unsubscribe > a {
+        color: #f8f6f4;
+        text-decoration: underline;
+      }
+
+      .copyrights {
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        height: 60px;
+        width: 100%;
+        background-color: #0a0a0a;
+        text-align: center;
+        font-size: 0.69rem;
+      }
+
+      .copyrights > span {
+        color: wheat;
+      }
+
+      .content {
+        padding: 2rem;
+      }
+      .content h2 {
+        color: #0a0a0a;
+        font-size: 1.5rem;
+      }
+      .content p {
+        color: #333;
+        margin: 1rem 0;
+        line-height: 1.5;
+      }
+      .content a {
+        color: #0a0a0a;
+        text-decoration: underline;
+      }
+      .content > .visit_campusconnect {
+        padding: 2rem;
+        text-align: center;
+      }
+      .visit_campusconnect > a {
+        margin: 0 auto;
+        border: 1px solid #fafafa;
+        text-decoration: none !important;
+        border-radius: 24px;
+        background-color: #0a0a0a;
+        color: white;
+        padding: 0.7rem 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Background color  -->
+    <div class="bg_color"></div>
+    <!-- Content -->
+    <div class="container">
+      <!-- Logo Image -->
+      <div class="logo_image">
+        <img
+          src="https://ucarecdn.com/8175f2cd-6ada-434b-999c-3f36c14d4b0f/cc_logo_horizontal_white.png"
+          alt="logo"
+        />
+      </div>
+
+      <div class="main_container">
+        <div class="content">
+          <h2>Dear <%= name %> ,</h2>
+          <p>Welcome to CampusConnect! 🎉</p>
+          <p>
+            We are thrilled to have you join our vibrant community of students.
+            CampusConnect is designed to enhance your college experience by
+            providing the best platform to connect, collaborate, and stay
+            informed.
+          </p>
+          <p>Here’s what you can look forward to:</p>
+          <p>
+            <strong>1. Network Like Never Before:</strong> Connect with fellow
+            students, make new friends, and build your network effortlessly. Our
+            intelligent friend suggestion feature helps you find like-minded
+            peers and expand your social circle.
+          </p>
+          <p>
+            <strong>2. Stay Updated:</strong> Never miss an important update
+            again! Get the latest notices, job releases, and campus news
+            delivered directly to you. Be the first to know about exciting
+            opportunities and crucial announcements.
+          </p>
+          <p>
+            <strong>3. Entrepreneurial Mindset Community:</strong> Join our
+            community focused on fostering an entrepreneurial mindset. Whether
+            you're interested in tech business ideas or agriculture-related
+            ventures, find like-minded individuals and resources to help you
+            succeed.
+          </p>
+          <p>
+            <strong>4. Private Chat:</strong> Keep in touch with your friends
+            through our private messaging feature. Whether it's group projects
+            or casual chats, stay connected with ease.
+          </p>
+          <p>
+            <strong>5. Event Details:</strong> Discover and join offline events
+            happening on campus. From workshops to social gatherings, find all
+            the details and never miss out on the fun.
+          </p>
+          <p>
+            <em>And there’s much more!</em>
+          </p>
+          <p>
+            We are committed to making your college life more engaging and
+            productive. Dive in, explore the features, and make the most out of
+            your CampusConnect experience.
+          </p>
+          <p>Welcome aboard!</p>
+          <div class="visit_campusconnect">
+            <a href="https://campusconnect.gbpuat.tech" class="button"
+              >Visit CampusConnect</a
+            >
+          </div>
+        </div>
+        <div class="team">
+          <p>Best Regards,</p>
+          <p>Team CampusConnect</p>
+        </div>
+      </div>
+      <footer>
+        <h2>Get In Touch</h2>
+        <div class="line"></div>
+        <div>
+          <!-- Icons -->
+        </div>
+        <p class="privacy_policy">
+          If you have any questions regarding your data, please visit our
+          <a href="#">Privacy Policy</a>. Need help? Contact us at
+        </p>
+        <p class="support_email">
+          Need help? Contact us at support@campusconnect.gbpuat.tech
+        </p>
+        <p class="unsubscribe">
+          To unsubscribe or manage your email preferences,
+          <a href="#">click here</a>.
+        </p>
+      </footer>
+      <div class="copyrights">
+        <span>&#169; 2024 CampusConnect. All Rights Reserved.</span>
+      </div>
+    </div>
+  </body>
+</html>

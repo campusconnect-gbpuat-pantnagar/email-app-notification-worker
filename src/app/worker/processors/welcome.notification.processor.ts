@@ -48,13 +48,13 @@ export class WelcomeEmailNotificationProcessor extends WorkerHost {
     const { email, name } = job.data;
     console.log(job.data);
     const context = {
-      name: name,
+      name: name.toUpperCase(),
     };
     await this._mailService.sendMail({
       to: email,
       from: `CampusConnect ${this._configService.get<string>('SMTP_SERVICE_EMAIL')}`,
-      subject: `Welcome to CampusConnect!`,
-      template: 'welcome/welcome.ejs',
+      subject: `Welcome to CampusConnect - Your Ultimate  Social Network For College Community!`,
+      template: 'welcome.ejs',
       context,
     });
   }

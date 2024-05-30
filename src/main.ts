@@ -1,14 +1,26 @@
 import { NestFactory } from '@nestjs/core';
 import { Logger } from '@nestjs/common';
-import { WorkerModule } from './worker.module';
-import * as path from 'path';
+import { AppModule } from './app/app.module';
+import { ConfigService } from '@nestjs/config';
 async function bootstrap() {
-  await NestFactory.createApplicationContext(WorkerModule);
-  Logger.log(
-    'EMAIL NOTIFICATION WORKER HAS STARTED SUCCESSFULLY 🚀.',
-    'Main.ts',
-  );
-  Logger.verbose(path.join(__dirname + '/templates/'));
+  const app = await NestFactory.create(AppModule);
+  const globalPrefix = 'api/v1';
+  const configService = app.get(ConfigService);
+  app.setGlobalPrefix(globalPrefix);
+  app.flushLogs();
+  app.enableShutdownHooks();
+
+  try {
+    const port = configService.get<number>('PORT') || 9000;
+    const host = configService.get<string>('HOST');
+    const protocol = configService.get<string>('PROTOCOL');
+    await app.listen(port);
+    Logger.log(
+      `🚀 email app notification worker is running on: ${protocol}://${host}:${port}/${globalPrefix}`,
+    );
+  } catch (error) {
+    Logger.warn(error);
+  }
 }
 
 bootstrap();
